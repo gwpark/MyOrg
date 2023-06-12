@@ -1,0 +1,11 @@
+//SELECT id,Title, CreatedDate
+//FROM ContentDocument
+//ORDER BY CreatedDate
+
+SELECT id, Title, PathOnClient, FirstPublishLocationId, ContentDocumentId, ContentLocation
+FROM ContentVersion
+
+
+//SELECT id, LinkedEntityId, ShareType, Visibility, ContentDocumentId
+//FROM ContentDocumentLink
+//WHERE ContentDocumentId = '0695h00000JLMd2AAH'

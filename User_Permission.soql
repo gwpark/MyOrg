@@ -1,0 +1,5 @@
+//select id, Contact.Name, ContactId
+//from User
+
+select id, AssigneeId, PermissionSet.Name
+from PermissionSetAssignment

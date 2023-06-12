@@ -1,0 +1,26 @@
+<!--
+ - Created by MS on 2023-03-31.
+ -->
+
+<!-- Selected Rows Lwc -->
+<template>
+    <lightning-Card title="Account List" icon-name="standard:account">
+        <lightning-button   variant="Neutral"
+                            label="Selected Records"
+                            title="Selected Records"
+                            onclick={getSelectedRec}
+                            slot="actions"
+                            icon-name="utility:check">
+        </lightning-button>
+        <div style="border-top: 1px solid rgb(221 219 218);">
+            <!-- datatable -->
+            <lightning-datatable
+                    key-field="id"
+                    data={data}
+                    columns={columns}
+                    column-widths-mode="fixed">
+            </lightning-datatable>
+            <!-- /datatable -->
+        </div>
+    </lightning-Card>
+</template>

@@ -1,0 +1,22 @@
+<!--
+ - Created by MS on 2023-03-30.
+ -->
+
+<!-- Action Button Sample -->
+<template>
+    <template if:true={recordId}>
+        <lightning-layout multiple-rows="true">
+            <lightning-layout-item class="slds-p-horizontal_small" size="4">Test1</lightning-layout-item>
+            <lightning-layout-item class="slds-p-horizontal_small" size="4">Test2</lightning-layout-item>
+            <lightning-layout-item class="slds-p-horizontal_small" size="4">{recordId}</lightning-layout-item>
+        </lightning-layout>
+
+        <footer class="slds-modal__footer" slot="footer">
+            <lightning-button
+                label="닫기"
+                variant="Neutral"
+                onclick={closeQuickAction}>
+            </lightning-button>
+        </footer>
+    </template>
+</template>

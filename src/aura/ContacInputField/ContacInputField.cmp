@@ -1,0 +1,11 @@
+<!--
+ - Created by MS on 2023-03-17.
+ -->
+
+<aura:component controller="ContactController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:LightningQuickActionWithoutHeader,forceCommunity:availableForAllPageTypes">
+    <aura:attribute name="contact" type="Contact" default="{ 'sobjectType': 'Contact' }"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <force:inputField aura:id="firstname" value="{!v.contact.FirstName}" change="{!c.handleChange}"/>
+    <force:inputField aura:id="lastname" value="{!v.contact.LastName}" change="{!c.handleChange}"/>
+    <force:outputField value="{!v.contact.Name}"/>
+</aura:component>

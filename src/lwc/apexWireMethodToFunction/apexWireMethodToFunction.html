@@ -1,0 +1,16 @@
+<!--
+ - Created by MS on 2023-03-20.
+ -->
+
+<!-- Apex Wire Method To Function -->
+<template>
+    <lightning-card title="ApexWireMethodToFunction" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template lwc:if={contacts}>
+                <template for:each={contacts} for:item="contact">
+                    <p key={contact.Id}>{contact.Name}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

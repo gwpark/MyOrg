@@ -1,0 +1,22 @@
+<!--
+ - Created by MS on 2023-04-04.
+ -->
+
+<!-- Lwc Lazy Loading Ctrl -->
+<template>
+    <!-- create card -->
+    <lightning-card variant="Narrow" title="LWC Datatable Infinite/Lazy Loading" icon-name="standard:recipe">
+        <div class="slds-var-p-around_small" style="height: 150px;">
+            <lightning-datatable key-field="Id"
+                                 data={data}
+                                 columns={columns}
+                                 load-more-offset="10"
+                                 onloadmore={handleLoadMore}
+                                 enable-infinite-loading
+                                 hide-checkbox-column
+                                 show-row-number-column>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+
+</template>

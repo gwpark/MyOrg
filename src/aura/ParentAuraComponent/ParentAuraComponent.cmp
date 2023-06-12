@@ -1,0 +1,19 @@
+<!--
+ - Created by MS on 2023-03-21.
+ -->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome" access="global" >
+
+    <aura:attribute name="name" type="String"/>
+    <aura:attribute name="city" type="String"/>
+
+    <c:childLwc aura:id="childLwc" onchildmethod="{!c.handleClick}"></c:childLwc>
+
+    <lightning:card title="Parent Aura Component" class="slds-m-top_small">
+        <div class="slds-p-horizontal_small">
+            Name : {! v.name }<br/>
+            City : {! v.city }
+        </div>
+    </lightning:card>
+
+</aura:component>

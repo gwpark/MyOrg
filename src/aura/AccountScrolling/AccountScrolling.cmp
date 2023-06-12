@@ -1,0 +1,19 @@
+<!--
+ - Created by MS on 2023-04-28.
+ -->
+
+<aura:component controller="AccountScrollingController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="acctList" type= "Account[]"/>
+    <aura:attribute name="mycolumns" type="List"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    <div style="height:150px">
+        <lightning:datatable data="{!v.acctList }"
+                             columns="{!v.mycolumns }"
+                             keyField="id"
+                             hideCheckboxColumn="true"
+                             enableInfiniteLoading="true"
+                             onloadmore="{!c.loadMoreData }"/>
+    </div>
+
+</aura:component>

@@ -1,0 +1,10 @@
+<!--
+ - Created by MS on 2023-04-04.
+ -->
+
+<apex:page standardController="Account">
+    <script>
+        window.open('/apex/ExcelDownload');
+        sforce.one.back(true);
+    </script>
+</apex:page>

@@ -1,0 +1,16 @@
+<!--
+ - Created by MS on 2023-03-27.
+ -->
+
+<!-- Apex Static Schema -->
+<template>
+    <lightning-card title="ApexStaticSchema" icon-name="custom:custom63">
+        <template lwc:if={contact.data}>
+            <div class="slds-m-around_medium">
+                <p>{name}</p>
+                <p>{title}</p>
+                <p><lightning-formatted-email value={email}></lightning-formatted-email></p>
+            </div>
+        </template>
+    </lightning-card>
+</template>

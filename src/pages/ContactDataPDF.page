@@ -1,0 +1,10 @@
+<!--
+ - Created by MS on 2023-04-03.
+ -->
+
+<apex:page Controller="PDFGenerateCtrl" renderAs="pdf">
+
+    <h1>Contact Data</h1>
+    <p><b>Name :</b> {!con.Name}</p>
+    <p><b>Email :</b> {!con.Email}</p>
+</apex:page>

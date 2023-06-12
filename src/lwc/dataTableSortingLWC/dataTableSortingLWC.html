@@ -1,0 +1,21 @@
+<!--
+ - Created by MS on 2023-03-29.
+ -->
+
+<!-- Data Table Sorting Lwc -->
+<template>
+    <lightning-card title="Data Sorting in Lightning Datatable in LWC" icon-name="standard:contact" >
+        <br/>
+        <div style="width: auto;">
+            <template if:true={data}>
+                <lightning-datatable data={data}
+                                     columns={columns}
+                                     key-field="id"
+                                     sorted-by={sortBy}
+                                     sorted-direction={sortDirection}
+                                     onsort={doSorting}
+                                     hide-checkbox-column="true"></lightning-datatable>
+            </template>
+        </div>
+    </lightning-card>
+</template>

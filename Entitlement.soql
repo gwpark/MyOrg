@@ -1,0 +1,11 @@
+//select id, Name
+//from CommerceEntitlementPolicy
+
+//select id, Name,PolicyId
+//from CommerceEntitlementProduct
+
+//select Id, Policy.Name, BuyerGroup.Name
+//from CommerceEntitlementBuyerGroup
+
+
+        

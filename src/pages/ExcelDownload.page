@@ -1,0 +1,13 @@
+<!--
+ - Created by MS on 2023-04-04.
+ -->
+
+<apex:page standardController="Account" extensions="TestController" contentType="application/vnd.ms-excel#AccountExcel.xls">
+    <apex:pageBlock>
+        <apex:pageBlockTable value="{!contactList}" var="con" columns="3">
+            <apex:column headerValue="Contact Name" value="{!con.Name}"></apex:column>
+            <apex:column headerValue="Email" value="{!con.Email}"></apex:column>
+            <apex:column headerValue="Account Name" value="{!con.account.Name}"></apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

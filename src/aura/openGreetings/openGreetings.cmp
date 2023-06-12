@@ -1,0 +1,10 @@
+<!--
+ - Created by MS on 2023-05-03.
+ -->
+
+<aura:component>
+    <aura:attribute name="pageReference" type="Object"/>
+    <lightning:navigation aura:id="navService"/>
+    <lightning:button label="Open Greeting in Subtab" onclick="{!c.openSubtab}"/>
+    <lightning:input label="Name" name="myname"/>
+</aura:component>

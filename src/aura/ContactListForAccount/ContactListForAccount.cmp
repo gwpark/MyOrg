@@ -1,0 +1,61 @@
+<!--
+ - Created by MS on 2023-04-27.
+ -->
+
+<aura:component controller="ContactController"
+                implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:LightningQuickActionWithoutHeader,forceCommunity:availableForAllPageTypes">
+
+    <!-- DataTable Attribute -->
+    <aura:attribute name="listContact" type="List"/>
+    <aura:attribute name="listContactCols" type="list" description="Contact Column"/>
+    <aura:attribute name="listAccount" type="Account[]"/>
+    <aura:attribute name="listAccountCols" type="list" description="Account Column"/>
+
+    <!-- DataTable Infinite -->
+    <aura:attribute name="listData" type="List" default="[]"/>
+    <aura:attribute name="loadMoreRows" type="Integer" default="3"/>
+    <aura:attribute name="mapAllData" type="Map" description="All Data"/>
+    <aura:attribute name="loadMoreStatus" type="String" default=""/>
+    <!-- Handler -->
+    <aura:handler value="this" name="init" action="{!c.fnInit}" />
+
+    <lightning:tabset variant="scoped" class="">
+        <lightning:tab label="Contacts" id="contacts" aura:id="contacts">
+            <div  style="height: 150px">
+                <aura:if isTrue="{!v.isDataLoading}">
+                    <lightning:spinner aura:id="" alternativeText="Loading" size="medium" variant="brand" />
+                </aura:if>
+                <lightning:datatable
+                    aura:id="listContact"
+                    keyField="Id"
+                    data="{!v.listContact}"
+                    columns="{!v.listContactCols}"
+                    hideCheckboxColumn="true"
+                    enableInfiniteLoading="true"
+                    onloadmore="{!c.fnLoadMoreData}"
+                />
+            </div>
+        </lightning:tab>
+
+        <lightning:tab label="Accounts" id="accounts" aura:id="accounts">
+            <div  style="height: 150px">
+                <aura:if isTrue="{!v.isDataLoading}">
+                    <lightning:spinner aura:id="" alternativeText="Loading" size="medium" variant="brand" />
+                </aura:if>
+                <lightning:datatable
+                        aura:id="listAccount"
+                        keyField="Id"
+                        data="{!v.listAccount}"
+                        columns="{!v.listAccountCols}"
+                        hideCheckboxColumn="true"
+                        enableInfiniteLoading="true"
+                        onloadmore="{!c.fnLoadMoreData}"
+                />
+            </div>
+            {! v.loadMoreStatus }
+        </lightning:tab>
+    </lightning:tabset>
+</aura:component>
+
+
+

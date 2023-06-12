@@ -1,0 +1,27 @@
+//select id, Pricebook2.Name, Product2.Name
+//from PricebookEntry
+//order by Product2.Name
+
+//select id, ProductCategoryId, ProductCategory.Name
+//from ProductCategoryProduct
+
+//select id, name
+//from ProductCatalog
+
+//select id, Name, Product.Name, ElectronicMediaGroup.Name
+//from ProductMedia
+
+//select id, Name
+//from ElectronicMediaGroup
+
+//select id, name
+//from BuyerGroup
+
+//select id, Name
+//from  Entitlement
+
+//select id, Name
+//from CommerceEntitlementPolicy
+
+select id, CommerceEntitlementProducts
+from Product2

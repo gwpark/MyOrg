@@ -1,0 +1,8 @@
+<!--
+ - Created by MS on 2023-05-04.
+ -->
+
+<!--c:ceEvent-->
+<aura:event type="COMPONENT">
+    <aura:attribute name="message" type="String"/>
+</aura:event>

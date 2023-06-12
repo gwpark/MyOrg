@@ -1,0 +1,3 @@
+SELECT Id, FirstName, LastName, Phone, Email
+FROM Contact
+LIMIT 3 
