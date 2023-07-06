@@ -4,10 +4,10 @@
     <option name="connections">
       <list>
         <IlluminatedCloudConnection>
-          <option name="connectionName" value="MyOrg" />
+          <option name="connectionName" value="MyOrg2" />
           <option name="connectionType" value="MDAPI" />
           <option name="defaultModuleName" value="MyOrg" />
-          <option name="offlineSymbolTablePath" value="$PROJECT_DIR$/IlluminatedCloud/MyOrg/OfflineSymbolTable.zip" />
+          <option name="offlineSymbolTablePath" value="$PROJECT_DIR$/IlluminatedCloud/MyOrg2/OfflineSymbolTable.zip" />
         </IlluminatedCloudConnection>
       </list>
     </option>

@@ -1,6 +1,5 @@
 /**
  * Created by MS on 2023-05-03.
- * Greet Tab을 실행함
  * lightning/n/Greet?c__name=Hong%20Gil%20Dong&c__recordId=1234
  */
 

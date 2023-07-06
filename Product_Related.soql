@@ -1,2 +1,13 @@
-select id, Name, Product.StockKeepingUnit, ProductId, VariantParent.Name, VariantParentId
-from ProductAttribute
+//select id, Name, Product.StockKeepingUnit, ProductId, VariantParent.Name, VariantParentId
+//from ProductAttribute
+
+//select id, Name
+//from ProductCategory
+
+//SELECT Id, ProductCategory.Name, Product.Name, product.StockKeepingUnit
+//from ProductCategoryProduct
+//order by ProductCategory.Name
+
+select id, BuyerGroup.Name, Buyer.
+from BuyerGroupMember
+

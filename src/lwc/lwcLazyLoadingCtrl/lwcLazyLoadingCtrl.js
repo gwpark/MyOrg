@@ -16,9 +16,9 @@ const columns = [
     { label: 'Phone', fieldName: 'Phone', type: 'text' },
     { label: 'Created Date', fieldName: 'CreatedDate', type: 'date',
             typeAttributes: {
-            day: "numeric",
+            year: "numeric",
             month: "numeric",
-            year: "numeric"
+            day: "numeric"
         }
     }
  ];

@@ -75,7 +75,6 @@ export default class DynamicallyAddRow extends LightningElement {
     saveRows() {
         console.log('this.filterList => ', this.filterList);
         this.isSpinner = true;
-
         saveAccounts({ lstAccs: this.filterList }).then(result => {
             this.isSpinner = false;
             this.showToastMessage('success', 'Accounts Saved Successfully!!', 'Success');

@@ -14,27 +14,27 @@ export default class CustomFileUploadLWC extends LightningElement {
      // getting file
     handleFileChange(event) {
         if(event.target.files.length > 0) {
-            const file = event.target.files[0]
-            var reader = new FileReader()
+            const file = event.target.files[0];
+            var reader = new FileReader();
             reader.onload = () => {
-                var base64 = reader.result.split(',')[1]
+                var base64 = reader.result.split(',')[1];
                 this.fileName = file.name;
                 this.fileData = {
                     'filename': file.name,
                     'base64': base64
                 }
-                console.log(this.fileData)
+                //console.log(this.fileData);
             }
-            reader.readAsDataURL(file)
+            reader.readAsDataURL(file);
         }
     }
 
     uploadFile() {
         this.handleSpinner();
-        const {base64, filename} = this.fileData
+        const {base64, filename} = this.fileData;
 
         uploadFile({ fileName:this.fileName, base64Data : base64, recordId:this.recordId }).then(result=>{
-            this.fileData = null
+            this.fileData = null;
             let title = `${filename} uploaded successfully!!`;
             this.ShowToast('Success!', title, 'success', 'dismissable');
             this.updateRecordView(this.recordId);

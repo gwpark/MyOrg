@@ -19,7 +19,6 @@
         event.getSource().set("v.isLoading", true);
         component.set('v.loadMoreStatus', 'Loading');
         var l = component.get('v.acctList').length;
-        console.log('========l==========>' + l)
         helper.fetchAccounts(component, event, l);
     }
 })

@@ -6,6 +6,7 @@ import { LightningElement, track } from 'lwc';
 import getContactList from '@salesforce/apex/ContactController.getContactList';
 
 export default class LifeCycle extends LightningElement {
+    // The @track Decorator Is No Longer Required for Lightning Web Components
     @track contacts;
     @track error;
 

@@ -13,6 +13,8 @@ export default class MyApp extends LightningElement {
             label: 'this is the aria-label value',
             // setting theme would have no effect
         });
+        //Result is true or false
+        console.log('===result=== ' + result);
         //Confirm has been closed
         //result is true if OK was clicked
         //and false if cancel was clicked
